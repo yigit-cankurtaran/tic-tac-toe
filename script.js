@@ -122,4 +122,26 @@ var Game = {
     }
     return false;
   },
+
+  // create a checkTie method
+  checkTie: function () {
+    // check if the turn is 9
+    // because there are 9 cells, if checkwin doesn't fire until then, it's a tie
+    if (Game.turn === 9) {
+      return true;
+    }
+    return false;
+  },
+
+  // create a showResult method
+  showResult: function (message) {
+    var result = document.querySelector(".result");
+    result.textContent = message;
+    // remove event listeners from the cells
+    // so that the game can't be played anymore
+    var cells = document.querySelectorAll(".cell");
+    cells.forEach(function (cell) {
+      cell.removeEventListener("click", Game.handleMove);
+    });
+  },
 };
