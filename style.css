@@ -13,29 +13,6 @@ board {
   padding: 5px;
 }
 
-.cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  background-color: white;
-  cursor: pointer;
-}
-
-.cell:hover {
-  background-color: #e6e6e6;
-}
-
-.cell:active {
-  background-color: #cccccc;
-}
-
-.result {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 10px;
-}
-
 .reset {
   font-size: 1.5rem;
   font-weight: bold;

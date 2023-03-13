@@ -35,3 +35,23 @@ var Player = {
     }
   },
 };
+
+var Game = {
+  // turn property
+  turn: 0,
+  // create a start method
+  start: function () {
+    // create the board
+    Gameboard.createBoard();
+    // let player 1 select a symbol
+    Player.selectSymbol();
+    // add event listeners to each cell
+    var cells = document.querySelectorAll(".cell");
+    cells.forEach(function (cell) {
+      cell.addEventListener("click", Game.handleMove);
+    });
+    // add event listener to the reset button
+    var resetButton = document.querySelector(".reset");
+    resetButton.addEventListener("click", Game.reset);
+  },
+};
