@@ -106,7 +106,20 @@ var Game = {
       // above are the columns
       [0, 4, 8],
       [2, 4, 6],
-      // above are the diagonals
     ];
+    // above are the diagonals
+    // loop through the winning combinations
+    for (var i = 0; i < winningCombinations.length; i++) {
+      var combination = winningCombinations[i];
+      // check if the board matches the current combination
+      if (
+        Gameboard.board[combination[0]] === symbol &&
+        Gameboard.board[combination[1]] === symbol &&
+        Gameboard.board[combination[2]] === symbol
+      ) {
+        return true;
+      }
+    }
+    return false;
   },
 };
