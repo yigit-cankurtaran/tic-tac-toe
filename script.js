@@ -90,4 +90,23 @@ var Game = {
       Player.symbol = "X";
     }
   },
+
+  // create a checkWin method
+  checkWin: function (symbol) {
+    // lots of ways to do this
+    // winning combinations in tic-tac-toe
+    var winningCombinations = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      // above are the rows
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      // above are the columns
+      [0, 4, 8],
+      [2, 4, 6],
+      // above are the diagonals
+    ];
+  },
 };
