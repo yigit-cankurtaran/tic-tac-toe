@@ -34,3 +34,22 @@ h1 {
   font-family: monospace;
   font-size: 3rem;
 }
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #e6e6e6;
+}
+
+.result {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px;
+}
