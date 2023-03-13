@@ -1,7 +1,17 @@
 const cells = document.querySelectorAll(".cell");
 const resetBtn = document.getElementById("reset");
-let currentPlayer = "X";
+let currentPlayer;
 let gameover = false;
+
+function getPlayerCharacter() {
+  let character = prompt("Please enter your character (X or O)");
+  while (character !== "X" && character !== "O") {
+    character = prompt("Invalid character. Pick X or O");
+  }
+  return character;
+}
+
+currentPlayer = getPlayerCharacter();
 
 class handleCellClick {
   constructor() {
