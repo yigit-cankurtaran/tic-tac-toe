@@ -54,4 +54,30 @@ var Game = {
     var resetButton = document.querySelector(".reset");
     resetButton.addEventListener("click", Game.reset);
   },
+
+  // create a handleMove method
+  handleMove: function (event) {
+    // check if the cell is empty
+    if (!event.target.textContent) {
+      // get the index of the cell
+      var index = event.target.id.slice(-1);
+      // add the player's symbol to the cell
+      event.target.textContent = Player.symbol;
+      // check if the player won
+      if (Game.checkWin(Player.symbol)) {
+        // alert the player that they won
+        Game.showResult(Player.symbol + " won!");
+        // reset the game
+        Game.reset();
+      } else if (Game.checkTie()) {
+        // alert the player that they tied
+        Game.showResult("Tie!");
+        // reset the game
+        Game.reset();
+      } else {
+        // switch the player
+        Game.switchPlayer();
+      }
+    }
+  },
 };
