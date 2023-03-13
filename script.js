@@ -13,14 +13,12 @@ function getPlayerCharacter() {
 
 currentPlayer = getPlayerCharacter();
 
-class handleCellClick {
-  constructor() {
-    if (gameover) return;
-    if (this.textContent !== "") return;
-    this.textContent = currentPlayer;
-    checkForWinner();
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-  }
+function handleCellClick() {
+  if (gameover) return;
+  if (this.textContent !== "") return;
+  this.textContent = currentPlayer;
+  checkForWinner();
+  currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
 
 function checkForWinner() {
