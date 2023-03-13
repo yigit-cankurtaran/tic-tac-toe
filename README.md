@@ -9,3 +9,4 @@
 - Unhappy with the production schedule. Could've finished it a lot sooner.
 - If I had written more simple Javascript from the start I wouldn't have had to rewrite so much.
 - This project made me a true believer in the KISS (Keep It Simple, Stupid) principle.
+- Might revisit this project in the future to add a bot to play against.
