@@ -80,4 +80,14 @@ var Game = {
       }
     }
   },
+
+  // create a switchPlayer method
+  switchPlayer: function () {
+    Game.turn++;
+    if (Player.symbol === "X") {
+      Player.symbol = "O";
+    } else {
+      Player.symbol = "X";
+    }
+  },
 };
