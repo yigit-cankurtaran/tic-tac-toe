@@ -5,13 +5,18 @@ var Gameboard = {
   createBoard: function () {
     // create a for loop that loops 10 times
     for (var i = 0; i < 10; i++) {
+      console.log("i: " + i);
+      // weird, the loop works but it displays 1 square
       // create a row array
       var row = [];
       // create a for loop that loops 10 times
       for (var j = 0; j < 10; j++) {
+        console.log("j: " + j);
         // add a 0 to the row array
         row.push(0);
       }
+      // i think i found where the problem is
+      // the row array is in the for loop
       // add the row array to the board array
       this.board.push(row);
     }
@@ -33,6 +38,8 @@ var Player = {
       alert("Please select X or O");
       this.selectSymbol();
     }
+    console.log(this.symbol);
+    // works as expected
   },
 };
 
@@ -166,3 +173,5 @@ var Game = {
     Game.start();
   },
 };
+
+Game.start();
