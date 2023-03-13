@@ -34,3 +34,17 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
 }
+
+/* center h3 right under h1 */
+h3 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* give the reset button some padding and shadow, rounded corners, thicker font */
+#reset {
+  padding: 10px 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-weight: bold;
+}
