@@ -27,5 +27,11 @@ var Player = {
     var symbol = prompt("Please select X or O");
     // make the symbol property equal to the user's input
     this.symbol = symbol;
+    // check if the user's input is not X or O
+    if (symbol !== "X" && symbol !== "O") {
+      // call the selectSymbol method
+      alert("Please select X or O");
+      this.selectSymbol();
+    }
   },
 };
