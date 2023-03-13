@@ -144,4 +144,25 @@ var Game = {
       cell.removeEventListener("click", Game.handleMove);
     });
   },
+
+  // create a reset method
+  reset: function () {
+    // reset the board
+    Gameboard.board = [];
+    Gameboard.createBoard();
+    // reset the turn
+    Game.turn = 0;
+    // reset the player's symbol
+    Player.symbol = "";
+    // reset the cells
+    var cells = document.querySelectorAll(".cell");
+    cells.forEach(function (cell) {
+      cell.textContent = "";
+    });
+    // reset the result
+    var result = document.querySelector(".result");
+    result.textContent = "";
+    // start the game again
+    Game.start();
+  },
 };
